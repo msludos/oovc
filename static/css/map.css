@@ -1,0 +1,14 @@
+#map {
+    width: 100vw;
+    height: 88vh;
+}
+
+.popup-country img {
+    width: 191px;
+    height: 127px;
+}
+
+.popup-country a {
+    text-decoration: none;
+    color: #333333;
+}

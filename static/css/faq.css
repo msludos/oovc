@@ -1,0 +1,18 @@
+h1 {
+    color: #226E93;
+    margin-left: 30px;
+}
+
+.question {
+    color: #212121;
+    margin-left: 80px;
+}
+
+.answer {
+    color: #212121;
+    margin-left: 110px;
+}
+
+a {
+    color: #006580;
+}

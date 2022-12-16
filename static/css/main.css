@@ -1,0 +1,45 @@
+* {
+    font-family: "PT Sans", sans-serif;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.menu {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+}
+
+.menu .logo {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+}
+
+.menu .logo img {
+    width: 55px;
+    height: 55px;
+    margin: 10px 16px;
+}
+
+.menu .items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 60%;
+}
+
+.menu .item, .menu .logo .text {
+    display: flex;
+    align-items: center;
+}
+
+.menu .item a {
+    color: white;
+    text-decoration: none;
+}
