@@ -7,10 +7,29 @@ L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain-background/{z}/{x
     minZoom: 2
 }).addTo(map);
 
+
+var point_marker = L.icon({
+    iconUrl: './point_marker.png',
+    iconSize: [16, 16]
+});
+
+var capital_point_marker = L.icon({
+    iconUrl: './capital_point_marker.png',
+    iconSize: [16, 16]
+});
+
 function setMapJson(json) {
     console.log(json);
     json.forEach(element => {
-        L.geoJSON(element).addTo(map);
+        L.geoJSON(element, {
+            pointToLayer: function(feature, latlng){
+                let icon_f = capital_point_marker;
+                if (feature.properties.type.valueOf() == "city") icon_f = point_marker; 
+                else icon_f = capital_point_marker;
+            
+                return L.marker(latlng, 
+                {icon: icon_f}).bindPopup(feature.properties.name + "\n" + feature.properties.type);
+        }}).addTo(map);
     });
 }
 
