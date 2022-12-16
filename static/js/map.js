@@ -44,7 +44,7 @@ fetch('/static/json/countries.json').then((response) => response.json())
     .then((json) => {
         console.log(json);
         json.countries.forEach(element => {
-            fetch(`/static/json/countries/${element.id}.geojson`).then((response) => response.json())
+            fetch(`/static/json/geo/${element.id}.geojson`).then((response) => response.json())
                 .then((json) => setMapJson(json.features, element));
         });
     });
