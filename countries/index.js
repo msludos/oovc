@@ -18,20 +18,33 @@ var capital_point_marker = L.icon({
     iconSize: [16, 16]
 });
 
-function setMapJson(json) {
-    console.log(json);
+function setMapJson(json, coutry) {
     json.forEach(element => {
         L.geoJSON(element, {
-            pointToLayer: function(feature, latlng){
+            style: {
+                fillColor: element.properties.fill,
+                color: element.properties.stroke
+            },
+            pointToLayer: function(feature, latlng) {
                 let icon_f = capital_point_marker;
                 if (feature.properties.type.valueOf() == "city") icon_f = point_marker; 
                 else icon_f = capital_point_marker;
             
                 return L.marker(latlng, 
-                {icon: icon_f}).bindPopup(feature.properties.name + "\n" + feature.properties.type);
-        }}).addTo(map);
+                {icon: icon_f}).bindPopup(feature.properties.name);
+            },
+            onEachFeature: function (feature, latlng) {
+                if (feature.geometry.type != "Point") latlng.bindPopup(`<div class="coutry"><img src="${coutry.id}.png"><b>${coutry.name}</b></div>`);
+            }
+        }).addTo(map);
     });
 }
 
-fetch('./MAP.geojson').then((response) => response.json())
-    .then((json) => setMapJson(json.features));
+fetch('./countries.json').then((response) => response.json())
+    .then((json) => {
+        console.log(json);
+        json.countries.forEach(element => {
+            fetch(`./${element.id}.geojson`).then((response) => response.json())
+                .then((json) => setMapJson(json.features, element));
+        });
+    });
