@@ -27,8 +27,23 @@ function setMapJson(json, coutry) {
             },
             pointToLayer: function(feature, latlng) {
                 let icon_f = capital_point_marker;
-                if (feature.properties.type == "city") icon_f = point_marker; 
-                else icon_f = capital_point_marker;
+                try {
+                    if (feature.properties.type.toLowerCase() == "city") icon_f = point_marker; 
+                    else icon_f = capital_point_marker;
+                } catch (e) {
+                    try {
+                        if (feature.properties.Type.toLowerCase() == "city") icon_f = point_marker; 
+                        else icon_f = capital_point_marker;
+                    } catch (ex) {
+                        console.log(e, ex);
+                    }
+                }
+
+                try {
+                    if (feature.properties.Name != (undefined || null)) feature.properties.name = feature.properties.Name;
+                } catch (e) {
+                    console.log(e);
+                }
 
                 console.log(feature);
             
