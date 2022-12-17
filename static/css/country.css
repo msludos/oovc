@@ -25,6 +25,9 @@
 
 .w img {
     border-radius: 20px;
+    width: 382px;
+    height: 254px;
+    border: 3px solid #212121;
 }
 
 .w .date {

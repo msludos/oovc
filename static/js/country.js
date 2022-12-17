@@ -42,8 +42,7 @@ window.onload = function() {
                         ds = document.querySelector("br");
                         dp.removeChild(ds);
                     }
-                        document.querySelector(".site").classList.add("off");
-
+                    
                     document.querySelector("title").innerHTML = country.name;
                 } else {
                     location.href = "/countries";

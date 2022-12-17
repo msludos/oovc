@@ -21,46 +21,55 @@
         {
             "id": "azeria",
             "name": "Азерийская Республика",
-            "date": "",
+            "date": "16.07.2022",
             "text": "",
-            "vk": "",
-            "author": "",
+            "vk": "vk.com/club214547343",
+            "author": "vk.com/superali2010",
             "site": ""
         },
         {
             "id": "kirepskaa-respublika",
             "name": "Кирепская Республика",
-            "date": "",
+            "date": "08.07.2022",
             "text": "",
-            "vk": "",
-            "author": "",
+            "vk": "vk.com/public214302746",
+            "author": "vk.com/id698520556",
             "site": ""
         },
         {
             "id": "sevosopl",
             "name": "Республика Севосополь",
-            "date": "",
+            "date": "16.12.2022",
             "text": "",
             "vk": "",
-            "author": "",
+            "author": "vk.com/filcher2009",
             "site": ""
         },
         {
             "id": "sahalinskaa-komunna",
-            "name": "Сахалинской Комунны",
-            "date": "",
+            "name": "Сахалинская Комунна",
+            "date": "17.12.2022",
             "text": "",
             "vk": "",
-            "author": "",
+            "author": "vk.com/agnvaz",
             "site": ""
         },
         {
             "id": "sivalkolaevskaa-imperya",
             "name": "Сивалколаевская Империя",
+            "date": "16.12.2022",
+            "text": "",
+            "vk": "",
+            "author": "vk.com/nennen_sie_mich_anfuhrer",
+            "site": ""
+        },
+        {
+            "id": "maingrad",
+            "name": "Майнград",
             "date": "",
             "text": "",
             "vk": "",
-            "author": "",
+            "author": "vk.com/euchertin",
             "site": ""
         }
     ]
