@@ -16,12 +16,34 @@ window.onload = function() {
                     document.querySelector(".description").innerHTML = country.text;
                     document.querySelector(".w img").setAttribute("src", `/static/imgs/countries/${country.id}.png`);
                     document.querySelector(".date").innerHTML = country.date;
-                    document.querySelector(".vk").innerHTML = country.vk;
-                    document.querySelector(".author").innerHTML = country.author;
-                    document.querySelector(".site").innerHTML = country.site;
-                    document.querySelector(".vk").setAttribute("href", "https://"+country.vk);
-                    document.querySelector(".author").setAttribute("href", "https://"+country.author);
-                    document.querySelector(".site").setAttribute("href", "https://"+country.site);
+
+                    if (country.vk != "") 
+                        document.querySelector(".vk").setAttribute("href", "https://"+country.vk);
+                    else{
+                        let dp = document.querySelector(".info");
+                        let ds = document.querySelector(".vk");
+                        dp.removeChild(ds);
+                    }
+
+                    if (country.author != "") 
+                        document.querySelector(".author").setAttribute("href", "https://"+country.author);
+                    else{
+                        let dp = document.querySelector(".info");
+                        let ds = document.querySelector(".author");
+                        dp.removeChild(ds);
+                    }
+
+                    if (country.site != "") 
+                        document.querySelector(".site").setAttribute("href", "https://"+country.site);
+                    else {
+                        let dp = document.querySelector(".info");
+                        let ds = document.querySelector(".site");
+                        dp.removeChild(ds);
+                        ds = document.querySelector("br");
+                        dp.removeChild(ds);
+                    }
+                        document.querySelector(".site").classList.add("off");
+
                     document.querySelector("title").innerHTML = country.name;
                 } else {
                     location.href = "/countries";

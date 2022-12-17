@@ -27,8 +27,10 @@ function setMapJson(json, coutry) {
             },
             pointToLayer: function(feature, latlng) {
                 let icon_f = capital_point_marker;
-                if (feature.properties.type.valueOf() == "city") icon_f = point_marker; 
+                if (feature.properties.type == "city") icon_f = point_marker; 
                 else icon_f = capital_point_marker;
+
+                console.log(feature);
             
                 return L.marker(latlng, 
                 {icon: icon_f}).bindPopup(feature.properties.name);
