@@ -15,7 +15,7 @@
 </head>
 <body>
     <div class="news"></div>
-    <script>$.get('/api/get.php', function(data){
+    <script>$.get('/api/get.php?count=3', function(data){
         document.querySelector(".news").innerHTML = data;
     });</script>
 </body>
