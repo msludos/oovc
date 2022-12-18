@@ -13,7 +13,7 @@ foreach ($decode["response"]["items"] as $item) {
         echo date('d m h:i', $item["date"]+3600*3);
         echo "</div>";
         echo "</div>";
-        echo "<a class=\"name\" href=\"/forum/article.php?id=";
+        echo "<a class=\"name\" href=\"https://vk.com/vgovernments?w=wall-201784905_";
         echo $item['id'];
         echo "\">";
         echo substr($item["text"], 0, $pos);
