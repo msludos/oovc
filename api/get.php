@@ -15,7 +15,7 @@ foreach ($decode["response"]["items"] as $item) {
         echo "</div>";
         echo "<a class=\"name\" href=\"https://vk.com/vgovernments?w=wall-201784905_";
         echo $item['id'];
-        echo "\">";
+        echo "\" target=\"_black\">";
         echo substr($item["text"], 0, $pos);
         echo "</a>";
         echo "</div>";
