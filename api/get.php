@@ -21,4 +21,6 @@ foreach ($decode["response"]["items"] as $item) {
         echo "</div>";
     }
 } 
+
+echo $_GET['q'];
 ?>
