@@ -47,7 +47,7 @@
         },
         {
             "id": "sahalinskaa-komunna",
-            "name": "Сахалинская Комунна",
+            "name": "Сахалинская Коммуна",
             "date": "17.12.2022",
             "text": "",
             "vk": "",
@@ -70,6 +70,15 @@
             "text": "",
             "vk": "",
             "author": "vk.com/euchertin",
+            "site": ""
+        },
+        {
+            "id": "pervoe-sibirskoe-carstvo",
+            "name": "Первое Сирибеское Царство",
+            "date": "",
+            "text": "",
+            "vk": "",
+            "author": "vk.com/sad_cat_remembers_everything",
             "site": ""
         }
     ]
