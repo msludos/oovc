@@ -10,7 +10,9 @@ foreach ($decode["response"]["items"] as $item) {
         echo "<div class='news-item'>";
         echo "<div class='stat'>";
         echo "<div class=\"date\">";
-        echo date('d m h:i', $item["date"]+3600*3);
+        echo date('d m', $item["date"]+3600*3);
+        echo "<hr>";
+        echo date('h:i', $item["date"]+3600*3);
         echo "</div>";
         echo "</div>";
         echo "<a class=\"name\" href=\"https://vk.com/vgovernments?w=wall-201784905_";
