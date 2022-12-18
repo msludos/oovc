@@ -7,11 +7,8 @@ foreach ($decode["response"]["items"] as $item) {
     if (($item["text"] != "") && ($item["id"] != "4")) {
         $pos = strpos($item["text"], "\n");
         
-        echo "<div class='news'>";
+        echo "<div class='news-item'>";
         echo "<div class='stat'>";
-        echo "<img src=\"/imgs/users/";
-        echo $item["owner_id"];
-        echo ".png\">";
         echo "<div class=\"date\">";
         echo date('d m h:i', $item["date"]+3600*3);
         echo "</div>";
