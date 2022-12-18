@@ -8,11 +8,15 @@
     <link rel="stylesheet" href="/static/css/main.css">
     <link rel="stylesheet" href="/static/css/index.css">
     <link rel="icon" type="image/png" href="/static/imgs/logo.png">
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
     <script src="/static/js/main.js"></script>
 
     <title>Главная | ООВГ</title>
 </head>
 <body>
-    
+    <div class="news"></div>
+    <script>$.get('/api/get.php', function(data){
+        document.querySelector(".news").innerHTML = data;
+    });</script>
 </body>
 </html>
