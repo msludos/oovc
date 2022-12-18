@@ -1,3 +1,7 @@
 .news .news-item a {
     color: black;
 }
+
+.news .news-item hr {
+    width: 41px;
+}
