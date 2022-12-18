@@ -3,5 +3,6 @@
 }
 
 .news .news-item hr {
-    width: 41px;
+    width: 39px;
+    margin: 2px;
 }
