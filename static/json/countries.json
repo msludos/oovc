@@ -66,7 +66,7 @@
         {
             "id": "maingrad",
             "name": "Республика Майнград",
-            "date": "",
+            "date": "16.12.2022",
             "text": "",
             "vk": "",
             "author": "vk.com/euchertin",
@@ -75,10 +75,19 @@
         {
             "id": "pervoe-sibirskoe-carstvo",
             "name": "Первое Сирибеское Царство",
-            "date": "",
+            "date": "16.12.2022",
             "text": "",
             "vk": "",
             "author": "vk.com/sad_cat_remembers_everything",
+            "site": ""
+        },
+        {
+            "id": "tembena",
+            "name": "Тембена",
+            "date": "16.12.2022",
+            "text": "",
+            "vk": "",
+            "author": "vk.com/mansydrug",
             "site": ""
         }
     ]
