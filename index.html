@@ -18,7 +18,8 @@
         <div class="load"></div>
     </div>
     <script>
-    window.onload = function() {
+    window.onload = async function() {
+        await new Promise(r => setTimeout(r, 1000));
         $.get('/api/get.php?count=3', function(data){
             document.querySelector(".news").innerHTML = data;
         });
