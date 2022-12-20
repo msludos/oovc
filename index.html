@@ -18,10 +18,13 @@
         <div class="load"></div>
     </div>
     <script>
-    await new Promise(r => setTimeout(r, 1000));
-    $.get('/api/get.php?count=3', function(data){
-        document.querySelector(".news").innerHTML = data;
-    });
+    async function p() {
+        await new Promise(r => setTimeout(r, 1000));
+        $.get('/api/get.php?count=3', function(data){
+            document.querySelector(".news").innerHTML = data;
+        });
+    }
+    p();
     </script>
 </body>
 </html>
