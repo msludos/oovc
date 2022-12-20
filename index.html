@@ -14,9 +14,15 @@
     <title>Главная | ООВГ</title>
 </head>
 <body>
-    <div class="news"></div>
-    <script>$.get('/api/get.php?count=3', function(data){
-        document.querySelector(".news").innerHTML = data;
-    });</script>
+    <div class="news">
+        <div class="load"></div>
+    </div>
+    <script>
+    window.onload = function() {
+        $.get('/api/get.php?count=3', function(data){
+            document.querySelector(".news").innerHTML = data;
+        });
+    };
+    </script>
 </body>
 </html>
