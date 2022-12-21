@@ -1,5 +1,5 @@
 <?php
-$token = "vk1.a.bNGU0eqrn_O5mYDsEFxeeoK4JwznJ3axFjqcv_GqndH4elX3MRRhP9u3O-5Si9CEglYZ5tatPe146cxkw5VFvMVimWVDVtlV5WjbUFjGonc9Ly6fUCCZxveCIgZ8PqniF8RCvBtpov_vMuRI7ppcMWq6VgZT3pnzxHw-BkAQ1XJ0i1DnP5L2vIE6q-mfoWk05r73ryPXr8QNqmrP3EyfXA";
+$token = "d98a7db1";
 
 function vk_msg_send($id, $text){
 	$request_params = array(
@@ -22,7 +22,7 @@ switch ($data->type) {
 	case 'message_new': 
 		$message_text = $data -> object -> text;
 		$chat_id = $data -> object -> peer_id;
-        
+
 		if ($message_text == "привет"){
 			vk_msg_send($chat_id, "Привет, я бот, который говорит две фразы.");
 		}
