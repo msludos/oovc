@@ -7,6 +7,14 @@
     margin: 2px;
 }
 
+.news .stat {
+    margin-right: 20px;
+}
+
+.news-header {
+    background-color: #222222;
+}
+
 .news {
     display: flex;
     justify-content: center;
