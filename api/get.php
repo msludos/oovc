@@ -6,8 +6,6 @@ $decode = json_decode($json, true);
 foreach ($decode["response"]["items"] as $item) {
     if (($item["text"] != "") && ($item["id"] != "4")) {
         $pos = strpos($item["text"], "\n");
-        echo "<div class='news-w'>";
-        echo "<div class='news-w'>";
         echo "<div class='news-item'>";
         echo "<div class='stat'>";
         echo "<div class=\"date\">";
@@ -21,8 +19,6 @@ foreach ($decode["response"]["items"] as $item) {
         echo "\" target=\"_black\">";
         echo substr($item["text"], 0, $pos);
         echo "</a>";
-        echo "</div>";
-        echo "</div>";
         echo "</div>";
     }
 } 
