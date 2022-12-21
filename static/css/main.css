@@ -64,3 +64,22 @@ body {
         transform: scale(1);
     }
 }
+
+.block {
+    margin: 20px 0px;
+}
+
+.block-header {
+    padding-left: 10px;
+    color: #226e93;
+    margin-bottom: 10px;
+}
+
+.block-text {
+    margin-bottom: 2px;
+}
+
+a {
+    text-decoration: underline;
+    color: black;
+}
