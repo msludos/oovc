@@ -23,7 +23,7 @@
     async function p() {
         await new Promise(r => setTimeout(r, 1000));
         $.get('/api/get.php?count=3', function(data){
-            document.querySelector(".news").innerHTML = data;
+            document.querySelector(".news-w").innerHTML = data;
         });
     }
     p();
