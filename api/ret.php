@@ -4,5 +4,5 @@
     
     $decode = json_decode($json, true);
 
-    echo "hello".$decode["response"][0]["first_name"];
+    echo "Здравствуйте ".$decode["response"][0]["first_name"];
 ?>
