@@ -83,11 +83,22 @@ body {
 
 .block-list {
     list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.block-list li a {
-    text-decoration: none;
-    transition: 1s;
+.block-list li {
+    width: 150px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 10px;
 }
 
 a {

@@ -1,0 +1,35 @@
+.countries-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.country {
+    display: flex;
+    flex-direction: row;
+    width: 402px;
+    height: 127px;
+    margin: 5px 15px;
+    border-radius: 20px;
+}
+
+.country img {
+    width: 191px;
+    height: 127px;
+    margin-right: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.country .text {
+    width: 191px;
+    height: 127px;
+    word-wrap: break-word;
+    font-size: 14px;
+}
+
+h4 {
+    margin: 5px 0px;
+}
