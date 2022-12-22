@@ -51,7 +51,7 @@ function setMapJson(json, coutry) {
                 {icon: icon_f}).bindPopup(feature.properties.name);
             },
             onEachFeature: function (feature, latlng) {
-                if (feature.geometry.type != "Point") latlng.bindPopup(`<div class="popup-country"><img src="/static/imgs/countries/${coutry.id}.png"><hr><a href="/countries/country.html?id=${coutry.id}">${coutry.name}❯</a></div>`);
+                if (feature.geometry.type != "Point") latlng.bindPopup(`<div class="popup-country"><img src="/static/imgs/countries/${coutry.id}.png"><hr><a href="/sections/countries/country.html?id=${coutry.id}">${coutry.name}❯</a></div>`);
             }
         }).addTo(map);
     });

@@ -9,26 +9,32 @@
     <link rel="stylesheet" href="/static/css/index.css">
     <link rel="icon" type="image/png" href="/static/imgs/logo.png">
     <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
-    <script src="/static/js/main.js"></script>
+
+    <script src="/static/js/index.js"></script>
 
     <title>Главная | ООВГ</title>
 </head>
 <body>
+    <div class="menu">
+        <div class="logo">
+            <img src="/static/imgs/logo.png" alt="logo">
+            <b class="text">ООВГ</b>
+        </div>
+        <div class="items">
+            <div class="item"><a href="/">Главная</a></div>
+            <div class="item"><a href="/map">Карта</a></div>
+            <div class="item"><a href="/news">Новости</a></div>
+            <div class="item"><a href="/sections">Разделы</a></div>
+            <div class="item"><a href="/faq">FAQ</a></div>
+        </div>  
+    </div>
+
     <div class="news">
         <h2 class="news-header">Последние Новости</h2>
         <div class="news-w">
             <div class="load"></div>
         </div>
     </div>
-    <script>
-    async function p() {
-        await new Promise(r => setTimeout(r, 1000));
-        $.get('/api/get.php?count=3', function(data){
-            document.querySelector(".news-w").innerHTML = data;
-        });
-    }
-    p();
-    </script>
 
     <div class="block">
         <h2 class="block-header">О Нас</h2>

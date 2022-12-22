@@ -8,12 +8,12 @@ let menu = `
         <div class="item"><a href="/">Главная</a></div>
         <div class="item"><a href="/map">Карта</a></div>
         <div class="item"><a href="/news">Новости</a></div>
-        <div class="item"><a href="/countries">Список Стран</a></div>
+        <div class="item"><a href="/sections">Разделы</a></div>
         <div class="item"><a href="/faq">FAQ</a></div>
     </div>  
 </div>
 `;
 
-window.onload = function () {
+export function menu() {
     document.querySelector("body").innerHTML = menu + document.querySelector("body").innerHTML;
 }

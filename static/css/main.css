@@ -81,6 +81,15 @@ body {
     padding: 0px 30px;
 }
 
+.block-list {
+    list-style: none;
+}
+
+.block-list li a {
+    text-decoration: none;
+    transition: 1s;
+}
+
 a {
     text-decoration: underline;
     color: black;
