@@ -6,6 +6,7 @@ window.onload = function() {
                 if (country.id == new URLSearchParams(location.search).get("id")) {
                     document.querySelector(".aside img").setAttribute("src", "/static/imgs/countries/"+country.id+".png");
                     document.querySelector(".date").innerHTML = country.date;
+                    document.querySelector(".description").innerHTML = country.text;
 
                     document.querySelector(".vk").setAttribute("href", country.vk);
                     document.querySelector(".author").setAttribute("href", "https://vk.com/id"+country.id);
