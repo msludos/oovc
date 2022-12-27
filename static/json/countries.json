@@ -1,31 +1,7 @@
 {
     "countries": [
-        {
-            "id": "541161804",
-            "name": "Народная Республика Агария",
-            "date": "07.07.2021",
-            "text": "Агари",
-            "vk": "https://vk.com/agaria_official",
-            "site": ""
-        },
-        {
-            "id": "andreeva-narodnaa-respublika",
-            "name": "Андреевская Народная Республика",
-            "date": "16.12.2022",
-            "text": "",
-            "vk": "",
-            "author": "",
-            "site": ""
-        },
-        {
-            "id": "azeria",
-            "name": "Азерийская Республика",
-            "date": "16.07.2022",
-            "text": "",
-            "vk": "vk.com/club214547343",
-            "author": "vk.com/superali2010",
-            "site": ""
-        },
+        "541161804",
+        "646549776",
         {
             "id": "kirepskaa-respublika",
             "name": "Кирепская Республика",
