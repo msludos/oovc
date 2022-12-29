@@ -18,7 +18,7 @@ var capital_point_marker = L.icon({
     iconSize: [16, 16]
 });
 
-function setMapJson(json, coutry) {
+function setMapJson(json, id) {
     json.forEach(element => {
         L.geoJSON(element, {
             style: {
@@ -51,7 +51,8 @@ function setMapJson(json, coutry) {
                 {icon: icon_f}).bindPopup(feature.properties.name);
             },
             onEachFeature: function (feature, latlng) {
-                if (feature.geometry.type != "Point") latlng.bindPopup(`<div class="popup-country"><img src="/static/imgs/countries/${coutry.id}.png"><hr><a href="/sections/countries/country.html?id=${coutry.id}">${coutry.name}❯</a></div>`);
+		let flag = $.ajax("https://oovc.vercel.app/api/country.php?id="+id+"&q=flag");
+                if (feature.geometry.type != "Point") latlng.bindPopup(`<div class="popup-country"><img src="${flag}"><hr><a href="/sections/countries/country.html?id=${id}">${$.ajax("https://oovc.vercel.app/api/country.php?id="+id+"&q=name")}❯</a></div>`);
             }
         }).addTo(map);
     });
@@ -61,7 +62,7 @@ fetch('/static/json/countries.json').then((response) => response.json())
     .then((json) => {
         console.log(json);
         json.countries.forEach(element => {
-            fetch(`/static/json/geo/${element.id}.geojson`).then((response) => response.json())
+            fetch(`/static/json/geo/${element}.geojson`).then((response) => response.json())
                 .then((json) => setMapJson(json.features, element));
         });
     });
