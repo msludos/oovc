@@ -56,10 +56,7 @@ function setMapJson(json, id) {
         		flag = data;
 			console.log(data);
    		});
-		$.get("https://oovc.vercel.app/api/country.php?id="+id+"&q=name", function(data) {
-        		name = data;
-			console.log(data);
-   		});
+		console.log($.get("https://oovc.vercel.app/api/country.php?id="+id+"&q=name"));
                 if (feature.geometry.type != "Point") latlng.bindPopup(`<div class="popup-country"><img src="${flag}"><hr><a href="/sections/countries/country.html?id=${id}">${name}❯</a></div>`);
             }
         }).addTo(map);
