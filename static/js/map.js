@@ -60,7 +60,6 @@ function setMapJson(json, id, flag, name) {
 window.onload = function() {
 fetch('/static/json/countries.json').then((response) => response.json())
     .then((json) => {
-        console.log(json);
         json.countries.forEach(element => {
 		console.log(element);
 	    	let flag, name;
