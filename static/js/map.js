@@ -64,11 +64,11 @@ fetch('/static/json/countries.json').then((response) => response.json())
         json.countries.forEach(element => {
 		console.log(element);
 	    	let flag, name;
-		$.get("https://oovc.vercel.app/api/country.php?id="+id+"&q=flag", function(data) {
+		$.get("https://oovc.vercel.app/api/country.php?id="+element+"&q=flag", function(data) {
         		flag = data;
 			console.log(data);
    		});
-		$.get("https://oovc.vercel.app/api/country.php?id="+id+"&q=name", function(data) {
+		$.get("https://oovc.vercel.app/api/country.php?id="+element+"&q=name", function(data) {
         		name = data;
 			console.log(data);
    		});
