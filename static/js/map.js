@@ -66,6 +66,7 @@ function setMapJson(json, id) {
     });
 }
 
+window.onload = function() {
 fetch('/static/json/countries.json').then((response) => response.json())
     .then((json) => {
         console.log(json);
@@ -75,3 +76,4 @@ fetch('/static/json/countries.json').then((response) => response.json())
                 .then((json) => setMapJson(json.features, element));
         });
     });
+}
