@@ -70,6 +70,7 @@ fetch('/static/json/countries.json').then((response) => response.json())
     .then((json) => {
         console.log(json);
         json.countries.forEach(element => {
+		console.log(element);
             fetch(`/static/json/geo/${element}.geojson`).then((response) => response.json())
                 .then((json) => setMapJson(json.features, element));
         });
