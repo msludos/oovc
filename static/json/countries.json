@@ -2,68 +2,11 @@
     "countries": [
         "541161804",
         "646549776",
-        {
-            "id": "kirepskaa-respublika",
-            "name": "Кирепская Республика",
-            "date": "08.07.2022",
-            "text": "",
-            "vk": "vk.com/public214302746",
-            "author": "vk.com/id698520556",
-            "site": ""
-        },
-        {
-            "id": "republik-sevosopol",
-            "name": "Республика Севосополь",
-            "date": "16.12.2022",
-            "text": "",
-            "vk": "vk.com/sevosopol",
-            "author": "vk.com/filcher2009",
-            "site": ""
-        },
-        {
-            "id": "sahalinskaa-komunna",
-            "name": "Сахалинская Коммуна",
-            "date": "17.12.2022",
-            "text": "",
-            "vk": "",
-            "author": "vk.com/agnvaz",
-            "site": ""
-        },
-        {
-            "id": "sivalkolaevskaa-imperya",
-            "name": "Сивалколаевская Империя",
-            "date": "16.12.2022",
-            "text": "",
-            "vk": "",
-            "author": "vk.com/nennen_sie_mich_anfuhrer",
-            "site": ""
-        },
-        {
-            "id": "maingrad",
-            "name": "Республика Майнград",
-            "date": "16.12.2022",
-            "text": "",
-            "vk": "",
-            "author": "vk.com/euchertin",
-            "site": ""
-        },
-        {
-            "id": "pervoe-sibirskoe-carstvo",
-            "name": "Первое Сирибеское Царство",
-            "date": "16.12.2022",
-            "text": "",
-            "vk": "",
-            "author": "vk.com/sad_cat_remembers_everything",
-            "site": ""
-        },
-        {
-            "id": "tembena",
-            "name": "Тембена",
-            "date": "16.12.2022",
-            "text": "",
-            "vk": "",
-            "author": "vk.com/mansydrug",
-            "site": ""
-        }
+        "698520556",
+        "611415983",
+        "688166418",
+        "235785546",
+        "710686293",
+        "575440151"
     ]
 }
