@@ -51,8 +51,11 @@ function setMapJson(json, id) {
                 {icon: icon_f}).bindPopup(feature.properties.name);
             },
             onEachFeature: function (feature, latlng) {
-		let flag = $.ajax("https://oovc.vercel.app/api/country.php?id="+id+"&q=flag");
-                if (feature.geometry.type != "Point") latlng.bindPopup(`<div class="popup-country"><img src="${flag}"><hr><a href="/sections/countries/country.html?id=${id}">${$.ajax("https://oovc.vercel.app/api/country.php?id="+id+"&q=name")}❯</a></div>`);
+		let flag;
+		$.get("https://oovc.vercel.app/api/country.php?id="+id+"&q=flag", function(data){
+        		flag = data;
+   		});
+                if (feature.geometry.type != "Point") latlng.bindPopup(`<div class="popup-country"><img src="${flag}"><hr><a href="/sections/countries/country.html?id=${id}">${$.get("https://oovc.vercel.app/api/country.php?id="+id+"&q=name", function(data){return data;});}❯</a></div>`);
             }
         }).addTo(map);
     });
