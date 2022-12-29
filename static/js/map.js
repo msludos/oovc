@@ -54,9 +54,11 @@ function setMapJson(json, id) {
 		let flag, name;
 		$.get("https://oovc.vercel.app/api/country.php?id="+id+"&q=flag", function(data) {
         		flag = data;
+			console.log(data);
    		});
 		$.get("https://oovc.vercel.app/api/country.php?id="+id+"&q=name", function(data) {
         		name = data;
+			console.log(data);
    		});
                 if (feature.geometry.type != "Point") latlng.bindPopup(`<div class="popup-country"><img src="${flag}"><hr><a href="/sections/countries/country.html?id=${id}">${name}❯</a></div>`);
             }
