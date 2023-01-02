@@ -63,16 +63,13 @@ window.onload = function() {
 fetch('/static/json/countries.json').then((response) => response.json())
     .then((json) => {
         json.countries.forEach(element => {
-		console.log(element);
-	    	let flag, name;
-		$.get("https://oovc.vercel.app/api/country.php?id=0&q=flag", function(data) {
-        		flag = data;
+            console.log(element);
+	    $.get(`https://oovc.vercel.app/api/country.php?id=${element}&q=flag`, function(fdata) {
+        	$.get(`https://oovc.vercel.app/api/country.php?id=${element}&q=name`, function(ndata) {
+		    fetch(`/static/json/geo/${element}.geojson`).then((response) => response.json())
+                        .then((json) => setMapJson(json.features, element, fdata, ndata)); 
    		});
-		$.get("https://oovc.vercel.app/api/country.php?id=0&q=name", function(data) {
-        		name = data;
-			fetch(`/static/json/geo/${element}.geojson`).then((response) => response.json())
-                            .then((json) => setMapJson(json.features, element, flag, data)); 
-   		});
+   	    });
         });
     });
 }
