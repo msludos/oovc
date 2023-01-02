@@ -65,6 +65,7 @@ fetch('/static/json/countries.json').then((response) => response.json())
         json.countries.forEach(element => {
             console.log(element);
 	    $.get(`https://oovc.vercel.app/api/country.php?id=${element}&q=flag`, function(fdata) {
+                alert(`https://oovc.vercel.app/api/country.php?id=${element}&q=flag`);
         	$.get(`https://oovc.vercel.app/api/country.php?id=${element}&q=name`, function(ndata) {
 		    fetch(`/static/json/geo/${element}.geojson`).then((response) => response.json())
                         .then((json) => setMapJson(json.features, element, fdata, ndata)); 
