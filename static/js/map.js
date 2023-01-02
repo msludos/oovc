@@ -67,14 +67,12 @@ fetch('/static/json/countries.json').then((response) => response.json())
 	    	let flag, name;
 		$.get("https://oovc.vercel.app/api/country.php?id=0&q=flag", function(data) {
         		flag = data;
-			alert(data);
    		});
 		$.get("https://oovc.vercel.app/api/country.php?id=0&q=name", function(data) {
         		name = data;
-			alert(data);
+			fetch(`/static/json/geo/${element}.geojson`).then((response) => response.json())
+                            .then((json) => setMapJson(json.features, element, flag, data)); 
    		});
-            fetch(`/static/json/geo/${element}.geojson`).then((response) => response.json())
-                .then((json) => setMapJson(json.features, element, flag, name));
         });
     });
 }
