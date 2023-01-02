@@ -127,4 +127,15 @@ a {
 
 .alert div {
     text-align: center;
+    margin-bottom: 20px;
 } 
+
+@media (max-width: 720px) {
+   .menu .logo {
+       display: none;
+       position: absolute;
+       width: 0px;
+       height: 0px;
+       top: 0;
+       left: 0;
+   } 
