@@ -51,6 +51,10 @@ function setMapJson(json, id, flag, name) {
                 {icon: icon_f}).bindPopup(feature.properties.name);
             },
             onEachFeature: function (feature, latlng) {
+                $.get("https://oovc.vercel.app/api/country.php?id=0", function(data) {
+                    alert(data);
+                });
+     
                 if (feature.geometry.type != "Point") latlng.bindPopup(`
 		<div class="popup-country"><img src="${flag}"><hr><a href="/sections/countries/country.html?id=${id}">${name}❯</a><script>console.log("a");</script></div>
 		`);
