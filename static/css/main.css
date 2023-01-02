@@ -110,14 +110,20 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .alert button {
     border-radius: 20px;
     border: 0px solid black;
     padding: 10px 20px;
-    background-color: blue;
+    background-color: black;
+    color: white;
 }
+
+.alert button:hover {
+    background-color: gray;
+} 
 
 .alert div {
     text-align: center;
