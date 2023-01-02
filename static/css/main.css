@@ -14,6 +14,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     color: white;
+    height: 55px;
 }
 
 .menu .logo {
