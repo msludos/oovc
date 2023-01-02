@@ -105,3 +105,20 @@ a {
     text-decoration: underline;
     color: black;
 }
+
+.alert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert button {
+    border-radius: 20px;
+    border: 0px solid black;
+    padding: 10px 20px;
+    background-color: blue;
+}
+
+.alert div {
+    text-align: center;
+} 
