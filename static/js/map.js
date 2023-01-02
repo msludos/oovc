@@ -51,10 +51,6 @@ function setMapJson(json, id, flag, name) {
                 {icon: icon_f}).bindPopup(feature.properties.name);
             },
             onEachFeature: function (feature, latlng) {
-                $.get("https://oovc.vercel.app/api/country.php?id=0", function(data) {
-                    alert(data);
-                });
-     
                 if (feature.geometry.type != "Point") latlng.bindPopup(`
 		<div class="popup-country"><img src="${flag}"><hr><a href="/sections/countries/country.html?id=${id}">${name}❯</a><script>console.log("a");</script></div>
 		`);
@@ -69,13 +65,13 @@ fetch('/static/json/countries.json').then((response) => response.json())
         json.countries.forEach(element => {
 		console.log(element);
 	    	let flag, name;
-		$.get("https://oovc.vercel.app/api/country.php?id="+element+"&q=flag", function(data) {
+		$.get("https://oovc.vercel.app/api/country.php?id=0&q=flag", function(data) {
         		flag = data;
-			console.log(data);
+			alert(data);
    		});
-		$.get("https://oovc.vercel.app/api/country.php?id="+element+"&q=name", function(data) {
+		$.get("https://oovc.vercel.app/api/country.php?id=0&q=name", function(data) {
         		name = data;
-			console.log(data);
+			alert(data);
    		});
             fetch(`/static/json/geo/${element}.geojson`).then((response) => response.json())
                 .then((json) => setMapJson(json.features, element, flag, name));
