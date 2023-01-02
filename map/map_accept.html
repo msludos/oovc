@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="icon" type="image/png" href="/static/imgs/logo.png">
+
+    <title>Подтверждение | ООВГ</title>
+</head>
+<body>
+    <div class="alert">
+    <div>
+        <h1>Внимание!</h1><br>
+        Организация Объединённых Виртуальных Государств - вымышленная "организация",<br>
+        Организация не имеет никакой реальной политической силы и не ставит своею целью что-либо из политики.<br> 
+        Она подчистую является выдумкой и поддерживается желающими этого людьми.<br>
+        Карта "стран" ООВГ является пародией на реальную карту мира и не имеет политической силы. 
+    </div>
+    <script>
+        function ok_alert() {
+            localStorage.acceptMap = 1;
+            location.href = "/map";
+        }
+    </script>
+    <button onclick="ok_alert()">Ок</button>
+    </div>
+</body>
+</html>
