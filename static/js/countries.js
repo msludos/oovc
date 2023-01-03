@@ -1,6 +1,6 @@
 window.onload = function() {
     alert("cr");
-    fetch('/static/json/countries.json').then((response) => response.json())
+    fetch('/static/json/countries.json').then((response) => response.text())
         .then((json) => {
             alert(json);
             json.countries.forEach(element => {
