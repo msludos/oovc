@@ -5,7 +5,7 @@ window.onload = function() {
 
         for (let i = 0+12*(page.get("page")-1); i <= 12+12*page.get("page"); i++) {
             let elem = json.countries[i];
-            
+            alert(elem);
             $.get(`https://oovc.vercel.app/api/country.php?id=${elem}&q=name`, function(name) {
                 $.get(`https://oovc.vercel.app/api/country.php?id=${elem}&q=flag`, function(flag) {
                     $.get(`https://oovc.vercel.app/api/country.php?id=${elem}&q=text`, function(text) {
