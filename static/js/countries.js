@@ -1,4 +1,5 @@
 window.onload = function() {
+    try {
     fetch('/static/json/countries.json').then((response) => response.json())
     .then((json) => {
         let page = new URLSearchParams(location.search);
@@ -24,4 +25,7 @@ window.onload = function() {
             });
         } 
     });
+   } catch (e) {
+      alert(e);
+   } 
 }
