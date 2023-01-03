@@ -4,6 +4,7 @@ window.onload = function() {
         .then((json) => {
             json.countries.forEach(element => {
                 alert(element);
+                alert(fetch("/api/country.php?id="+element+"&q=name").then((response) => response.text()).then((tex) => alert(tex)));
             });
         });
 }
