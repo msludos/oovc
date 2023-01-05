@@ -4,6 +4,9 @@
     
     $decode = json_decode($json, true);
 
-    if ($decode[$_GET["q"]] == null) echo $_GET["id"];
-    else echo $decode[$_GET["q"]];
+    if ($decode[$_GET["q"]] == null) {
+        echo $_GET["id"];
+    } else {
+        echo $decode[$_GET["q"]];
+    }
 ?>
