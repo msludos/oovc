@@ -4,7 +4,10 @@ window.onload = function() {
         .then((json) => {
             json.countries.forEach(element => {
                 alert(element);
-                fetch("/api/country.php?id="+element+"&q=name").then((response) => response.text()).then((tex) => alert(tex));
+                $.get("/api/country.php?id="+element+"&q=name", function(data) {
+                    alert(data);
+                });
+                //fetch("/api/country.php?id="+element+"&q=name").then((response) => response.text()).then((tex) => alert(tex));
             });
         });
 }
