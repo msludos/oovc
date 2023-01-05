@@ -3,10 +3,12 @@
     $json = file_get_contents($jsonurl);
     
     $decode = json_decode($json, true);
+    
+    $answer = $decode[$_GET["q"]];
 
-    if ($decode[$_GET["q"]] == null) {
+    if ($answer === null) {
         echo $_GET["id"];
     } else {
-        echo $decode[$_GET["q"]];
+        echo $answer;
     }
 ?>
