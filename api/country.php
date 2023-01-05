@@ -3,10 +3,10 @@
     $json = file_get_contents($jsonurl);
     
     $decode = json_decode($json, true);
-     
-    try {
+    
+    if (("" === $decode[$_GET["q"]]) || (null === $decode[$_GET["q"]])) {
+        echo "undefined";
+    } else {
         echo $decode[$_GET["q"]];
-    } catch (Exception $e) {
-        echo $_GET["id"];
     }
 ?>
