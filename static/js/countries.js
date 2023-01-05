@@ -5,7 +5,7 @@ window.onload = function() {
             json.countries.forEach(element => {
                 alert(element);
                 fetch("/api/country.php?id="+element+"&q=name").then((response) => response.text()).then((name) => {
-                    document.querySelector(".countries-list").innerHTML += name;
+                    document.querySelector(".countries-list").innerHTML += "'" + name.replace("<", "<'") + "'";
                 });
             });
         });
