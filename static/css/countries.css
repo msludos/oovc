@@ -47,6 +47,12 @@ h4 {
     .country img {
         opacity: 0.6;
     }
+
+    .country .text {
+        background-color: none;
+        display: inline-block;
+        transform: translateX(-573px);
+    } 
 }
 
 @media (max-width: 360px) {
@@ -62,4 +68,10 @@ h4 {
     .country img {
         opacity: 0.6;
     }
+ 
+    .country .text {
+        background-color: none;
+        display: inline-block;
+        transform: translateX(-305px);
+    } 
 }
