@@ -86,4 +86,8 @@
     .country h4 a {
         color: white;
     }
+    
+    .country h4 {
+        width: 275px;
+    } 
 }
