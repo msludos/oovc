@@ -12,7 +12,7 @@ window.onload = function() {
                     <img src="${json.flag}">
                     <div class="text">
                         <h4>${json.name}</h4>
-                        ${json.text.slice(1, 130)}
+                        ${json.text.slice(0, 130)}
                     </div>
                 </div>
                 `;
