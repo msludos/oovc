@@ -48,13 +48,17 @@
 
     .country .text {
         background-color: none;
-        display: absolute;
-        /*transform: translate(-558px, 10px);*/
+        display: block;
+        transform: translate(-558px, 10px);
         width: 543px;
         height: 381px;
         color: white;
         text-align: center;
         border: 1px solid black;
+    } 
+    
+    .country h4 {
+        width: 543px;
     } 
 }
 
@@ -74,8 +78,8 @@
  
     .country .text {
         background-color: none;
-        display: absolute;
-        /*transform: translate(-290px, 10px);*/
+        display: block;
+        transform: translate(-290px, 10px);
         width: 275px;
         height: 203px;
         color: white;
