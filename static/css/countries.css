@@ -49,8 +49,8 @@ h4 {
     .country .text {
         background-color: none;
         display: inline-block;
-        transform: translateX(-573px);
-        width: 100%;
+        transform: translate(-558px, 10px);
+        width: 543px;
         height: 100%;
         color: white;
         text-align: center;
@@ -74,8 +74,8 @@ h4 {
     .country .text {
         background-color: none;
         display: inline-block;
-        transform: translateX(-305px);
-        width: 100%;
+        transform: translate(-290px, 10px);
+        width: 275px;
         height: 100%;
         color: white;
         text-align: center;
