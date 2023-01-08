@@ -6,6 +6,9 @@ window.onload = function() {
             alert(txt);
             jsons.forEach(element => {
                 alert(element);
+                let json = JSON.parse(element)
+                alert(json.name);
+                document.querySelector(".countries-list").innerHTML += json.name;
             });
     });
    } catch (e) { alert(e);}
