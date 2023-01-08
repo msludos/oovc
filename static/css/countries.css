@@ -33,3 +33,15 @@
 h4 {
     margin: 5px 0px;
 }
+
+@media (max-width: 720px) {
+    .country, .country img {
+        border-radius: 5px;
+        width: 573px;
+        height: 381px;
+    } 
+    
+    .country img {
+        opacity: 0.6;
+    }
+}
