@@ -49,11 +49,12 @@
     .country .text {
         background-color: none;
         display: absolute;
-        transform: translate(-558px, 10px);
+        //transform: translate(-558px, 10px);
         width: 543px;
         height: 381px;
         color: white;
         text-align: center;
+        border: 1px solid black;
     } 
 }
 
@@ -74,10 +75,11 @@
     .country .text {
         background-color: none;
         display: absolute;
-        transform: translate(-290px, 10px);
+        //transform: translate(-290px, 10px);
         width: 275px;
         height: 203px;
         color: white;
+        border: 1px solid black;
         text-align: center;
     } 
 
