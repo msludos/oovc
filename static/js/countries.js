@@ -1,5 +1,4 @@
 window.onload = function() {
-    try {
     fetch('/api/allcountries.php').then((response) => response.text())
         .then((txt) => {
             let jsons = txt.split("~");
@@ -8,8 +7,15 @@ window.onload = function() {
                 //alert(element);
                 let json = JSON.parse(element)
                 //alert(json.name);
-                document.querySelector(".countries-list").innerHTML += json.name;
+                document.querySelector(".countries-list").innerHTML += `
+                <div class="country">
+                    <img src="${json.flag}">
+                    <div class="text">
+                        <h4>${json.name}</h4>
+                        ${json.text.slice(1, 130)}
+                    </div>
+                </div>
+                `;
             });
     });
-   } catch (e) { alert(e);}
 }
