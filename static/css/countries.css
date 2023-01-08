@@ -30,9 +30,9 @@
     font-size: 14px;
 }
 
-h4 {
+.country h4 {
     margin: 5px 0px;
-}
+} 
 
 @media (max-width: 720px) {
     .country, .country img {
@@ -80,4 +80,8 @@ h4 {
         color: white;
         text-align: center;
     } 
+
+    .country h4 a {
+        color: white;
+    }
 }
