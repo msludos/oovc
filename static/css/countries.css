@@ -39,6 +39,22 @@ h4 {
         border-radius: 5px;
         width: 573px;
         height: 381px;
+        color: white;
+        text-align: center;
+    } 
+    
+    .country img {
+        opacity: 0.6;
+    }
+}
+
+@media (max-width: 360px) {
+    .country, .country img, .country .text {
+        border-radius: 5px;
+        width: 305px;
+        height: 203px;
+        color: white;
+        text-align: center;
     } 
     
     .country img {
