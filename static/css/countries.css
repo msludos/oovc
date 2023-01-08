@@ -48,7 +48,7 @@
 
     .country .text {
         background-color: none;
-        display: inline-block;
+        display: block;
         transform: translate(-558px, 10px);
         width: 543px;
         height: 100%;
@@ -73,7 +73,7 @@
  
     .country .text {
         background-color: none;
-        display: inline-block;
+        display: block;
         transform: translate(-290px, 10px);
         width: 275px;
         height: 100%;
