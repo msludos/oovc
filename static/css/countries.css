@@ -58,7 +58,7 @@ h4 {
 }
 
 @media (max-width: 360px) {
-    .country, .country img, .country .text {
+    .country, .country img {
         border-radius: 5px;
         width: 305px;
         height: 203px;
