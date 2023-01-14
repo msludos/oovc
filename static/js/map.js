@@ -67,7 +67,7 @@ fetch('/static/json/countries.json').then((response) => response.json())
 	    $.get(`https://oovc.vercel.app/api/country.php?id=${element}`, function(data) {
                 let json = JSON.parse(data);
 		//if (json.status == -1) continue;
-		console.log(json.stringify());
+		console.log(JSON.stringify(json));
 		fetch(`/static/json/geo/${element}.geojson`).then((response) => response.json())
                     .then((json) => setMapJson(json.features, element, json.flag, json.name)); 
             });
