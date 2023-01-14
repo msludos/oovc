@@ -7,6 +7,8 @@ window.onload = function() {
                     $.get(`https://oovc.vercel.app/api/country.php?id=${country.id}&fields=name,flag,date,text,vk,author,site`, function(data) {
                         let datas = data.split("~");
                         
+                        console.log(datas);
+                        
                         document.querySelector(".aside img").setAttribute("src", datas[1]);
                         document.querySelector(".date").innerHTML = datas[2];
                         document.querySelector(".description").innerHTML = datas[3];
