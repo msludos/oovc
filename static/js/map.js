@@ -65,12 +65,10 @@ fetch('/static/json/countries.json').then((response) => response.json())
         json.countries.forEach(element => {
             console.log(element);
 	    $.get(`https://oovc.vercel.app/api/country.php?id=${element}`, function(data) {
-                let json = JSON.parse(data);
-		alert(data);
-		//if (json.status == -1) continue;
+		if (JSON.parse(data).status == -1) continue;
 		console.log(JSON.stringify(json));
 		fetch(`/static/json/geo/${element}.geojson`).then((response) => response.json())
-                    .then((json) => setMapJson(json.features, element, json["flag"], json["name"])); 
+                    .then((json) => setMapJson(json.features, element, JSON.parse(data).flag, JSON.parse(data).name)); 
             });
         });
     });
