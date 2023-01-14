@@ -59,12 +59,12 @@ function setMapJson(json, id, flag, name) {
     });
 }
 
-window.onload = function() {
+window.onload = async function() {
 fetch('/static/json/countries.json').then((response) => response.json())
     .then((json) => {
         json.countries.forEach(element => {
             console.log(element);
-	    $.get(`https://oovc.vercel.app/api/country.php?id=${element}`, function(data) {
+	    await $.get(`https://oovc.vercel.app/api/country.php?id=${element}`, function(data) {
 		if (JSON.parse(data).status == -1) continue;
 		console.log(JSON.stringify(json));
 		fetch(`/static/json/geo/${element}.geojson`).then((response) => response.json())
