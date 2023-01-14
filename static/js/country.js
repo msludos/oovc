@@ -15,7 +15,6 @@ window.onload = function() {
                         document.querySelector(".author").setAttribute("href", datas[5]);
                         document.querySelector(".site").setAttribute("href", datas[6]);
                     });
-                    break;
                 }
         });
     });
