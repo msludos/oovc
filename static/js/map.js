@@ -71,4 +71,5 @@ fetch('/static/json/countries.json').then((response) => response.json())
                     .then((json) => setMapJson(json.features, element, json["flag"], json["name"])); 
             });
         });
+    });
 }
