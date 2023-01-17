@@ -53,7 +53,6 @@ function setMapJson(json, id, flag, name) {
                 if (feature.geometry.type != "Point") latlng.bindPopup(`
 		<div class="popup-country"><img src="${flag}"><hr><a href="/sections/countries/country.html?id=${id}">${name}❯</a><script>console.log("a");</script></div>
 		`);
-		load++;
             }
         }).addTo(map);
     });
