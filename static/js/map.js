@@ -7,6 +7,9 @@ L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain-background/{z}/{x
     minZoom: 2
 }).addTo(map);
 
+document.querySelector("#map").style.display = "none";
+var load = 0;
+var loadMax = 0;
 
 var point_marker = L.icon({
     iconUrl: '/static/imgs/map/point_marker.png',
@@ -54,6 +57,7 @@ function setMapJson(json, id, flag, name) {
                 if (feature.geometry.type != "Point") latlng.bindPopup(`
 		<div class="popup-country"><img src="${flag}"><hr><a href="/sections/countries/country.html?id=${id}">${name}❯</a><script>console.log("a");</script></div>
 		`);
+		load++;
             }
         }).addTo(map);
     });
@@ -62,6 +66,7 @@ function setMapJson(json, id, flag, name) {
 window.onload = function() {
 fetch('/static/json/countries.json').then((response) => response.json())
     .then((json) => {
+	loadMax = json.countries.length;
         json.countries.forEach(element => {
             console.log(element);
 	    $.get(`https://oovc.vercel.app/api/country.php?id=${element}&fields=name,flag`, function(data) {
@@ -73,4 +78,11 @@ fetch('/static/json/countries.json').then((response) => response.json())
         });
     });
 document.querySelector(".leaflet-attribution-flag").remove();
+var id_remove = setInterval(function() {
+    if (load >= loadMax) {
+	document.querySelector("#map").style.display = "block";
+	document.querySelector(".load").remove();
+	clearInterval(id_remove);
+    }
+}, 10);
 }
