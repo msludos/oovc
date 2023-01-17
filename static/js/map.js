@@ -7,10 +7,6 @@ L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain-background/{z}/{x
     minZoom: 2
 }).addTo(map);
 
-document.querySelector("#map").style.display = "none";
-var load = 0;
-var loadMax = 0;
-
 var point_marker = L.icon({
     iconUrl: '/static/imgs/map/point_marker.png',
     iconSize: [16, 16]
@@ -64,7 +60,7 @@ function setMapJson(json, id, flag, name) {
 }
 
 window.onload = function() {
-fetch('/static/json/countries.json').then((response) => response.json())
+fetch('https://OOVCbot.msludos.repl.co/listc').then((response) => response.json())
     .then((json) => {
 	loadMax = json.countries.length;
         json.countries.forEach(element => {
@@ -78,11 +74,4 @@ fetch('/static/json/countries.json').then((response) => response.json())
         });
     });
 document.querySelector(".leaflet-attribution-flag").remove();
-var id_remove = setInterval(function() {
-    if (load >= loadMax) {
-	document.querySelector("#map").style.display = "block";
-	document.querySelector(".load").remove();
-	clearInterval(id_remove);
-    }
-}, 10);
 }
