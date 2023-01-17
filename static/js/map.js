@@ -60,7 +60,7 @@ function setMapJson(json, id, flag, name) {
 }
 
 window.onload = function() {
-fetch('https://OOVCbot.msludos.repl.co/listc').then((response) => response.json())
+fetch('https://oovc.vercel.app/api/countriesid.php').then((response) => response.json())
     .then((json) => {
 	loadMax = json.countries.length;
         json.countries.forEach(element => {
