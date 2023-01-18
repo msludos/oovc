@@ -15,14 +15,14 @@ window.onload = function() {
                         document.querySelector(".date").innerHTML = datas[2];
                         document.querySelector(".description").innerHTML = datas[3].replace("~", "");
                         
-                        let vk = document.createElement('a').setAttribute("href", datas[4]);
+                        let vk = document.createElement('a');
                         
                         let site = document.createElement('a').setAttribute("href", datas[6]);
                         
                         
                         document.querySelector("list a:first-child").setAttribute("href", datas[5]);
-                        if (datas[4] != "https://vk.com/"+country) document.querySelector(".info").appendChild(vk);
-                        if (datas[6] != "https://example.com") document.querySelector(".info").appendChild(site);
+                        if (datas[4] != "https://vk.com/"+country) document.querySelector(".info").appendChild(vk).setAttribute("href", datas[4]);
+                        if (datas[6] != "https://example.com") document.querySelector(".info").appendChild(site).setAttribute("href", datas[6]);
                     });
                 }
         });
