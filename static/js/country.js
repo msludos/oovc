@@ -24,7 +24,7 @@ window.onload = function() {
                         
                         document.querySelector("list a:first-child").setAttribute("href", datas[5]);
                         if (datas[4] != "https://vk.com/"+country) document.querySelector(".info").appendChild(vk);
-                        if (datas[6] != "https://example.com") document.querySelector(".info").appendChild(site));
+                        if (datas[6] != "https://example.com") document.querySelector(".info").appendChild(site);
                     });
                 }
         });
