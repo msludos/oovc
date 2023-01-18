@@ -9,6 +9,8 @@ window.onload = function() {
                         
                         console.log(datas);
                         
+                        document.querySelector("title").innerText = datas[0];
+                        
                         document.querySelector(".aside img").setAttribute("src", datas[1]);
                         document.querySelector(".date").innerHTML = datas[2];
                         document.querySelector(".description").innerHTML = datas[3];
