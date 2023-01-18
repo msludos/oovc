@@ -4,7 +4,7 @@ window.onload = function() {
             console.log(json.list);
             json.list.forEach(country => {
                 if (country == new URLSearchParams(location.search).get("id")) {
-                    $.get(`https://oovc.vercel.app/api/country.php?id=${country.id}&fields=name,flag,date,text,vk,author,site`, function(data) {
+                    $.get(`https://oovc.vercel.app/api/country.php?id=${country}&fields=name,flag,date,text,vk,author,site`, function(data) {
                         let datas = data.split("~");
                         
                         console.log(datas);
