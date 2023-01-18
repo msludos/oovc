@@ -15,9 +15,9 @@ window.onload = function() {
                         document.querySelector(".date").innerHTML = datas[2];
                         document.querySelector(".description").innerHTML = datas[3].replace("~", "");
                         
-                        let vk = document.createElement('a').setAttribute("href", datas[4]).textContent = "VK";
+                        let vk = document.createElement('a').setAttribute("href", datas[4]);
                         
-                        let site = document.createElement('a').setAttribute("href", datas[6]).textContent = "Сайт";
+                        let site = document.createElement('a').setAttribute("href", datas[6]);
                         
                         
                         document.querySelector("list a:first-child").setAttribute("href", datas[5]);
