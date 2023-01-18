@@ -1,9 +1,9 @@
 window.onload = function() {
-    fetch('/static/json/countries.json').then((response) => response.json())
+    fetch('https://oovc.vercel.app/api/countriesid.php').then((response) => response.json())
         .then((json) => {
-            console.log(json.countries);
-            json.countries.forEach(country => {
-                if (country.id == new URLSearchParams(location.search).get("id")) {
+            console.log(json.list);
+            json.list.forEach(country => {
+                if (country == new URLSearchParams(location.search).get("id")) {
                     $.get(`https://oovc.vercel.app/api/country.php?id=${country.id}&fields=name,flag,date,text,vk,author,site`, function(data) {
                         let datas = data.split("~");
                         
