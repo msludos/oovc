@@ -13,11 +13,11 @@ window.onload = function() {
                         
                         document.querySelector(".aside img").setAttribute("src", datas[1]);
                         document.querySelector(".date").innerHTML = datas[2];
-                        document.querySelector(".description").innerHTML = datas[3];
-
-                        document.querySelector(".vk").setAttribute("href", datas[4]);
-                        document.querySelector(".author").setAttribute("href", datas[5]);
-                        document.querySelector(".site").setAttribute("href", datas[6]);
+                        document.querySelector(".description").innerHTML = datas[3].replace("~", "");
+                        
+                        document.querySelector("list a:first-child").setAttribute("href", datas[5]);
+                        if (datas[4] != "https://vk.com/"+country) document.querySelector(".info").appendChild(document.createElement('a').setAttribute("href", datas[4]));
+                        if (datas[6] != "https://example.com") document.querySelector(".info").appendChild(document.createElement('a').setAttribute("href", datas[6]));
                     });
                 }
         });
