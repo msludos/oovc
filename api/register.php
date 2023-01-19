@@ -7,6 +7,6 @@
         } else {
             echo $value;
         }
-        echo "<br><br>"
+        echo "<br><br>";
     }
 ?>
