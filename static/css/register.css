@@ -1,8 +1,12 @@
-.w {
+.w, form {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+form {
+    flex-direction: column;
 }
 
 input, option, select {
@@ -14,6 +18,18 @@ input, option, select {
     width: 275px;
 }
 
+select {
+    width: 275px;
+}
+
 #submit, .goverment {
     margin-top: 45px;
+}
+
+.info, .other, .goverment, .valute {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
 }
