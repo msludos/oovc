@@ -28,21 +28,19 @@
     </div>
 
     <form action="/api/register.php" method="post" class="w">
-        
-       
-        <input type="text" placeholder="Название" name="name" id="name">
-        <input type="text" placeholder="Ссылка на флаг" name="flag" id="flag">
-        <input type="date" placeholder="Дата создания" name="date" id="date">
-        <input type="text" placeholder="Текст" name="text" id="text">
-        <input type="text" placeholder="Ссылка на сообщество VK страны" name="vk" id="vk">
-        <input type="text" placeholder="Сайт страны" name="site" id="site">
+        <input required type="text" placeholder="Название" name="name" id="name">
+        <input required type="text" placeholder="Ссылка на флаг" name="flag" id="flag">
+        <input required type="date" placeholder="Дата создания" name="date" id="date">
+        <input required type="text" placeholder="Текст" name="text" id="text">
+        <input required type="text" placeholder="Ссылка на сообщество VK страны" name="vk" id="vk">
+        <input required type="text" placeholder="Сайт страны" name="site" id="site">
         <div class="valute">
-            <input type="text" placeholder="Название валюты" name="valute-name" id="valute-name">
-            <input type="text" placeholder="Курс к рублю" name="valute-change" id="valute-change">
+            <input required type="text" placeholder="Название валюты" name="valute-name" id="valute-name">
+            <input required type="text" placeholder="Курс к рублю" name="valute-change" id="valute-change">
         </div>
 
         <div class="goverment">
-            <select size="1" name="forms[]">
+            <select required size="1" name="forms[]">
                 <option selected disabled>Форма правления</option>
                 <option value="monarch-absolute">Абсолютная Монархия</option>
                 <option value="monarch-dualistic">Дуалистическая Монархия</option>
@@ -51,12 +49,12 @@
                 <option value="respublic-parlament">Парламентская Республика</option>
                 <option value="respublic-uniq">Смешанная Республика</option>
             </select> 
-            <select size="1" name="gover[]">
+            <select required size="1" name="gover[]">
                 <option selected disabled>Форма государственного Устройства</option>
                 <option value="unitar">Унитарное</option>
                 <option value="federative">Федеративное</option>
             </select> 
-            <select size="1" name="politic[]">
+            <select required size="1" name="politic[]">
                 <option selected disabled>Политический Режим</option>
                 <option value="totolitar">Тоталитарный</option>
                 <option value="avtoritar">Авторитарный</option>
@@ -66,5 +64,7 @@
 
         <input type="submit" name="submit" id="submit" value="Отправить">
     </form>
+
+    <script src="/static/js/register.js"></script>
 </body>
 </html>
