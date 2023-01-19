@@ -1,0 +1,19 @@
+.w {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input, option, select {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid;
+    border-color: gray black black gray  ;
+    width: 275px;
+}
+
+#submit, .goverment {
+    margin-top: 45px;
+}
