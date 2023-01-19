@@ -1,6 +1,6 @@
 <?php
     foreach ($_POST as &$value) {
-        if (gettype($type) == "array") {
+        if (gettype($type).is_array()) {
             foreach ($value as &$valuew) {
                 echo $valuew;
             }
