@@ -13,11 +13,3 @@
     $url = "https://oovcbot.msludos.repl.co/data?key=".$_POST["key"]."&id=".$_POST["id"]."&text=".$json;
     echo file_get_contents($url);
 ?>                               
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <script>location.href = "/register"</script>
-</head>
-<body></body>
-</html>
