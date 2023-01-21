@@ -10,5 +10,5 @@
         echo "<br><br>";
     }
 
-    echo "https://oovcbot.msludos.repl.co/data?code=".$_POST["code"]."&name=".$_POST["name"]."&flag=".$_POST["flag"]."&date=".$_POST["date"]."&text=".$_POST["text"]."&vk=".$_POST["vk"]."&site=".$_POST["site"]."&valutename=".$_POST["valute-name"]."&valutechange=".$_POST["valute-change"]."&form=".$_POST["forms"]."&gover=".$_POST["gover"]."&politic=".$_POST["politic"]."&key=".$_POST["key"]."&id=".$_POST["id"];
+    echo "https://oovcbot.msludos.repl.co/data?key=".$_POST["key"]."&name=".$_POST["name"]."&flag=".$_POST["flag"]."&date=".$_POST["date"]."&text=".$_POST["text"]."&vk=".$_POST["vk"]."&site=".$_POST["site"]."&valutename=".$_POST["valute-name"]."&valutechange=".$_POST["valute-change"]."&form=".$_POST["forms"][0]."&gover=".$_POST["gover"][0]."&politic=".$_POST["politic"][0]."&id=".$_POST["id"];
 ?>
