@@ -16,7 +16,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script>location.href = <?php echo $url?></script>
+    <script>location.href = '<?php echo $url?>'</script>
 </head>
 <body></body>
 </html>
