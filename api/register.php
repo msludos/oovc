@@ -24,7 +24,7 @@
             'form-government' => $_POST["forms"][0],
             'form-government-system' => $_POST["gover"][0],
             'form-politic' => $_POST["politic"][0],
-            '' => ''
+            'status' => '0'
         )
     );
     $opts = array('http' =>
