@@ -2,7 +2,7 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 
 window.onload = function() {
-    if (urlParams.get("redact") != null) {
+    if (urlParams.get("redact") == 0) {
         $.get(`https://oovc.vercel.app/api/country.php?id=${urlParams.get("id")}&fields=name,flag,date,text,vk,site,valute-name,valute-change,form-government,form-government-system,form-politic`, function(data) {
             document.querySelector("#name").value = data[0];
             document.querySelector("#flag").value = data[1];
