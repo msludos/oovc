@@ -36,4 +36,8 @@
     );
     $context  = stream_context_create($opts);
     $result = file_get_contents('https://oovcbot.msludos.repl.co/data', false, $context);
-?>                               
+?>
+
+<script>window.onload = function() {
+    location.href = "/";
+}</script>
