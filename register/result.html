@@ -15,7 +15,7 @@
 <body>
     <div class="result"></div>
     <script>
-        document.querySelector(".result").innerHTML = URLSearchParams(location.search).get("text");
+        document.querySelector(".result").innerHTML = new URLSearchParams(location.search).get("text");
     </script>
 </body>
 </html>
