@@ -33,3 +33,9 @@ select {
     align-items: center;
     flex-wrap: nowrap;
 }
+
+@media (max-width: 360px) {
+    * {
+        flex-direction: column;
+    } 
+} 
