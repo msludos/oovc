@@ -35,7 +35,7 @@ select {
 }
 
 @media (max-width: 360px) {
-    * {
+    form > * {
         flex-direction: column;
     } 
 } 
