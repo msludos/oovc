@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/register.css">
+    <link rel="icon" type="image/png" href="/static/imgs/logo.png">
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
+
+    <title>Регистрация | ООВГ</title>
+</head>
+<body>
+    <div class="result"></div>
+    <script>
+        document.querySelector(".result").innerHTML = URLSearchParams(location.search).get("text");
+    </script>
+</body>
+</html>

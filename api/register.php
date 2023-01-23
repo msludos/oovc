@@ -39,5 +39,5 @@
 ?>
 
 <script>window.onload = function() {
-    location.href = "/";
+    location.href = "/register/result.html?text=<?php echo $result?>";
 }</script>
