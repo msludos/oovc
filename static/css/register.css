@@ -34,6 +34,22 @@ select {
     flex-wrap: nowrap;
 }
 
+.resultw {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.resultw a {
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
 @media (max-width: 360px) {
     form > * {
         flex-direction: column;
