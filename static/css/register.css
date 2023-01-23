@@ -50,7 +50,7 @@ select {
     border-radius: 20px;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 720px) {
     .w {
         flex-direction: column;
     } 
