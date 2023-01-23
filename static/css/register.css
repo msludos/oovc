@@ -51,7 +51,7 @@ select {
 }
 
 @media (max-width: 360px) {
-    form > * {
+    .w {
         flex-direction: column;
     } 
 } 
