@@ -3,6 +3,7 @@ window.onload = function() {
         .then((txt) => {
             let jsons = txt.split("~");
             jsons.forEach(element => {
+                console.log(element);
                 let json = JSON.parse(element)
                 if (json.status == -1) return;
                 document.querySelector(".countries-list").innerHTML += `
