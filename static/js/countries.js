@@ -4,6 +4,7 @@ window.onload = function() {
             let jsons = txt.split("~");
             jsons.forEach(element => {
                 let json = JSON.parse(element)
+                if (json.status == -1) continue;
                 document.querySelector(".countries-list").innerHTML += `
                 <div class="country">
                     <img src="${json.flag}">
