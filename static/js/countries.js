@@ -2,7 +2,7 @@ window.onload = function() {
     fetch('/api/allcountries.php').then((response) => response.text())
         .then((txt) => {
             let jsons = txt.split("~");
-            consol.log(txt);
+            console.log(txt);
             jsons.forEach(element => {
                 console.log(element);
                 let json = JSON.parse(element)
