@@ -60,8 +60,8 @@ function setMapJson(json, id, flag, name) {
 
 window.onload = function() {
 fetch('https://oovc.vercel.app/api/countriesid.php').then((response) => response.text())
-    .then((json) => {
-        json.split("~").forEach(element => {
+    .then((ids) => {
+        ids.split("~").forEach(element => {
             console.log(element);
 	    $.get(`https://oovc.vercel.app/api/country.php?id=${element}&fields=name,flag`, function(data) {
 		if (data == "deleted") return;
