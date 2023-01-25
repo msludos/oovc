@@ -44,8 +44,6 @@ function setMapJson(json, id, flag, name) {
                     console.log(e);
                 }
 
-                console.log(feature);
-            
                 return L.marker(latlng, 
                 {icon: icon_f}).bindPopup(feature.properties.name);
             },
