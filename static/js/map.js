@@ -63,8 +63,8 @@ fetch('https://oovc.vercel.app/api/countriesid.php').then((response) => response
 	    $.get(`https://oovc.vercel.app/api/country.php?id=${element}&fields=name,flag`, function(data) {
 		if (data == "deleted") return;
 		let datas = data.split("~");
-		fetch(`/static/json/geo/${element}.geojson`).then((response) => response.json())
-                    .then((json) => {console.log(element);setMapJson(json.features, element, datas[1], datas[0]);}); 
+		fetch(`/static/json/geo/${element}.geojson`).then((response) => {console.log(element);return response.json();})
+                    .then((json) => setMapJson(json.features, element, datas[1], datas[0])); 
             });
         });
     });
