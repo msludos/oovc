@@ -7,11 +7,17 @@ window.onload = function() {
                 console.log(element);
                 let json = JSON.parse(element)
                 if (json.status == -1) return;
+                
+                let status = "";
+                if (json.status == 0) status = " находится на рассмотрении"
+                if (json.status == 1) status = " подтверждено"
+                if (json.status == 2) status = " привелегирировано"
+
                 document.querySelector(".countries-list").innerHTML += `
                 <div class="country">
                     <img src="${json.flag}">
                     <div class="text">
-                        <h4><a href="/sections/countries/country.html?id=${json.id}">${json.name}</a><img src="/static/imgs/status/${json.status}.png" title="Государство"></h4>
+                        <h4><a href="/sections/countries/country.html?id=${json.id}">${json.name}</a><img src="/static/imgs/status/${json.status}.png" title="Государство${status}"></h4>
                         ${json.text.split("|")[0]}
                     </div>
                 </div>
