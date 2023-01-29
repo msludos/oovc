@@ -44,8 +44,6 @@ function setMapJson(json, id, flag, name) {
                     console.log(e);
                 }
 
-                console.log(feature);
-            
                 return L.marker(latlng, 
                 {icon: icon_f}).bindPopup(feature.properties.name);
             },
@@ -59,15 +57,14 @@ function setMapJson(json, id, flag, name) {
 }
 
 window.onload = function() {
-fetch('https://oovc.vercel.app/api/countriesid.php').then((response) => response.json())
-    .then((json) => {
-        json.list.forEach(element => {
-            console.log(element);
+fetch('https://oovc.vercel.app/api/countriesid.php').then((response) => response.text())
+    .then((ids) => {
+        ids.split("~").forEach(element => {
 	    $.get(`https://oovc.vercel.app/api/country.php?id=${element}&fields=name,flag`, function(data) {
 		if (data == "deleted") return;
 		let datas = data.split("~");
-		fetch(`/static/json/geo/${element}.geojson`).then((response) => response.json())
-                    .then((json) => setMapJson(json.features, element, datas[1], datas[0])); 
+		fetch(`/static/json/geo/${element}.geojson`).then((response) => {console.log(element);return response.text();})
+                    .then((json) => return/*setMapJson(json, element, datas[1], datas[0])*/); 
             });
         });
     });
