@@ -23,6 +23,12 @@
     border-radius: 10px;
 }
 
+.country h4 img {
+    width: 14px;
+    height: 14px;
+    border: none;
+}
+
 .country .text {
     width: 191px;
     height: 127px;
