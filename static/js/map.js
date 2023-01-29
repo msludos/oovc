@@ -61,19 +61,11 @@ fetch('https://oovc.vercel.app/api/countriesid.php').then((response) => response
     .then((ids) => {
         ids.split("~").forEach(element => {
             console.log(element);
-            try {
-                $.get(`https://oovc.vercel.app/api/country.php?id=${element}&fields=name,flag`, function(data) {
-                    let datas = data.split("~");
-                    try {
-                        fetch(`/static/json/geo/${element}.geojson`).then((response) => response.json())
-                            .then((json) => setMapJson(json.features, element, datas[1], datas[0])); 
-                    } catch {
-                        console.error(element+" load failed.");
-                    }
-                });
-            } catch {
-                console.error(element+" load failed.");
-            }
+            $.get(`https://oovc.vercel.app/api/country.php?id=${element}&fields=name,flag`, async function(data) {
+                let datas = data.split("~");
+                await fetch(`/static/json/geo/${element}.geojson`).then((response) => response.json())
+                    .then((json) => setMapJson(json.features, element, datas[1], datas[0])); 
+            });
         });
     });
 document.querySelector(".leaflet-attribution-flag").remove();
