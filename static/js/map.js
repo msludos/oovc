@@ -66,7 +66,7 @@ fetch('https://oovc.vercel.app/api/countriesid.php').then((response) => response
                     let datas = data.split("~");
                     try {
                         fetch(`/static/json/geo/${element}.geojson`).then((response) => response.json())
-                            .then((json) => setMapJson(json, element, datas[1], datas[0])); 
+                            .then((json) => setMapJson(json.features, element, datas[1], datas[0])); 
                     } catch {
                         console.error(element+" load failed.");
                     }
