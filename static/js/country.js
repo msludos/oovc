@@ -13,12 +13,12 @@ function goverment(goverment_a, goverment_system, politic) {
         case "demoratic": politic = "Демократическим"; break;
     }
     switch(goverment_a) {
-        case "monarch-absolute": politic = "Абсолютная Монархия"; break;
-        case "monarch-dualistic": politic = "Дуалистическая Монархия"; break;
-        case "monarch-parlament": politic = "Парламентская Монархия"; break;
-        case "respublic-president": politic = "Президентская Республика"; break;
-        case "respublic-parlamen": politic = "Парламентская Республика"; break;
-        case "respublic-uniq": politic = "Смешанная Республика"; break;
+        case "monarch-absolute": goverment_a = "Абсолютная Монархия"; break;
+        case "monarch-dualistic": goverment_a = "Дуалистическая Монархия"; break;
+        case "monarch-parlament": goverment_a = "Парламентская Монархия"; break;
+        case "respublic-president": goverment_a = "Президентская Республика"; break;
+        case "respublic-parlamen": goverment_a = "Парламентская Республика"; break;
+        case "respublic-uniq": goverment_a = "Смешанная Республика"; break;
     }
     return goverment_system+" "+goverment_a+" с "+politic+" режимом"
 }
