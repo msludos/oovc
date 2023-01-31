@@ -4,13 +4,21 @@ function get(selector) {
 
 function goverment(goverment_a, goverment_system, politic) {
     switch (goverment_system) {
-        case "Унитарное": goverment_system = "Унитарная"; break;
-        case "Федеративное": goverment_system = "Федеративная"; break;
+        case "unitar": goverment_system = "Унитарная"; break;
+        case "federative": goverment_system = "Федеративная"; break;
     }
     switch(politic) {
-        case "Тоталитарный": politic = "Тоталитарным"; break;
-        case "Авторитарный": politic = "Авторитарным"; break;
-        case "Демократический": politic = "Демократическим"; break;
+        case "totolitar": politic = "Тоталитарным"; break;
+        case "avtoritar": politic = "Авторитарным"; break;
+        case "demoratic": politic = "Демократическим"; break;
+    }
+    switch(goverment_a) {
+        case "monarch-absolute": politic = "Абсолютная Монархия"; break;
+        case "monarch-dualistic": politic = "Дуалистическая Монархия"; break;
+        case "monarch-parlament": politic = "Парламентская Монархия"; break;
+        case "respublic-president": politic = "Президентская Республика"; break;
+        case "respublic-parlamen": politic = "Парламентская Республика"; break;
+        case "respublic-uniq": politic = "Смешанная Республика"; break;
     }
     return goverment_system+" "+goverment_a+" с "+politic+" режимом"
 }
@@ -24,7 +32,7 @@ window.onload = function() {
         get("title").innerText = datas[0];
         
         get(".description h1").innerText = datas[0];
-        get(".description").innerText += datas[3];
+        get(".description .text").innerText += datas[3];
 
         get(".about img").setAttribute("src", datas[1]);
         get(".about .links .author").setAttribute("href", "https://vk.com/id"+new URLSearchParams(location.search).get("id"));
