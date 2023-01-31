@@ -1,5 +1,5 @@
 window.onload = function() {
-    $.get(`https://oovc.vercel.app/api/country.php?id=${country}&fields=name,flag,date,text,vk,site,valute-name,valute-change,form-government,form-government-system,form-politic,status`, function(data) {
+    $.get(`https://oovc.vercel.app/api/country.php?id=${country}&fields=name,flag,date,text,vk,site,valute-name,valute-change,form-government,form-government-system,form-politic`, function(data) {
         let datas = data.split("~");
         
         console.log(datas);
