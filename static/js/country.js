@@ -24,7 +24,7 @@ window.onload = function() {
         get("title").innerText = datas[0];
         
         get(".description h1").innerText = data[0];
-        get(".deccription").innerText += data[3];
+        get(".description").innerText += data[3];
 
         get(".about img").setAttribute("src", data[1]);
         get(".about .links .author").setAttribute("href", "https://vk.com/id"+new URLSearchParams(location.search).get("id"));
