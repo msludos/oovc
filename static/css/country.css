@@ -29,6 +29,8 @@
 .about img {
     border-radius: 20px;
     border: 1px solid black;
+    width: 362px;
+    height: 242px;
 }
 
 .about * {
