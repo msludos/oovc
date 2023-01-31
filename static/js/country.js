@@ -23,17 +23,17 @@ window.onload = function() {
         
         get("title").innerText = datas[0];
         
-        get(".description h1").innerText = data[0];
-        get(".description").innerText += data[3];
+        get(".description h1").innerText = datas[0];
+        get(".description").innerText += datas[3];
 
-        get(".about img").setAttribute("src", data[1]);
+        get(".about img").setAttribute("src", datas[1]);
         get(".about .links .author").setAttribute("href", "https://vk.com/id"+new URLSearchParams(location.search).get("id"));
-        get(".about .links .vk").setAttribute("href", data[4]);
-        get(".about .links .site").setAttribute("href", data[5]);
+        get(".about .links .vk").setAttribute("href", datas[4]);
+        get(".about .links .site").setAttribute("href", datas[5]);
 
-        get(".valute .name").innerText += data[6];
-        get(".valute .change").innerText += data[7];
+        get(".valute .name").innerText += datas[6];
+        get(".valute .change").innerText += datas[7];
 
-        get(".goverment").innerText = goverment(data[8], data[9], data[10]);
+        get(".goverment").innerText = goverment(datas[8], datas[9], datas[10]);
     });
 }
