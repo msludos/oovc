@@ -31,7 +31,7 @@ window.onload = function() {
         
         get("title").innerText = datas[0];
         
-        get(".description h1").innerText = datas[0];
+        get(".description h4").innerText = datas[0];
         get(".description .text").innerText += datas[3];
 
         get(".about img").setAttribute("src", datas[1]);
