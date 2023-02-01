@@ -35,6 +35,7 @@ window.onload = function() {
         get(".description .text").innerText += datas[3];
 
         get(".about img").setAttribute("src", datas[1]);
+        get(".about .date").setAttribute("src", datas[2]);
         get(".about .links .author").setAttribute("href", "https://vk.com/id"+new URLSearchParams(location.search).get("id"));
         get(".about .links .vk").setAttribute("href", datas[4]);
         get(".about .links .site").setAttribute("href", datas[5]);

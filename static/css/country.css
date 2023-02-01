@@ -47,4 +47,8 @@
         width: 181px;
         height: 121px;
     }
+
+    .description {
+        padding: 0%;
+    }
 }
