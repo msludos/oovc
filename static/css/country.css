@@ -33,8 +33,17 @@
     height: 242px;
 }
 
+.about > * {
+    margin-top: 10px;
+}
+
 @media (max-width: 360px) {
     .country {
         flex-direction: column;
     } 
+    
+    .about img {
+        width: 181px;
+        height: 121px;
+    }
 }
