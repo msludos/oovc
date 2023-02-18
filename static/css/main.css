@@ -83,6 +83,11 @@ body {
     padding: 0px 30px;
 }
 
+.block-a {
+    color: #226e93;
+    text-decoration: none;
+}
+
 .block-list {
     list-style: none;
     display: flex;
