@@ -61,7 +61,7 @@ fetch('https://oovc.vercel.app/api/geo.php').then((response) => response.text())
     .then((geos) => {
         geos.split("~").forEach(element => {
             id = element.slice(0, 9)
-            console.log("~"+id)
+            console.log("~"+id);
             geo = JSON.parse(element.slice(9))
             console.log(id);
             $.get(`https://oovc.vercel.app/api/country.php?id=${id}&fields=name,flag`, async function(data) {
