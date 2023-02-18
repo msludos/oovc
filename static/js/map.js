@@ -62,7 +62,7 @@ fetch('https://oovc.vercel.app/api/geoid.php').then((response) => response.json(
         geos["ids"].forEach(element => {
             $.get(`https://oovc.vercel.app/api/country.php?id=${element}&fields=name,flag`, async function(data) {
                 let datas = data.split("~");
-                $.get(`https://oovc.vercel.app/api/geo.php&id=${element}`, async function(geo) {
+                $.get(`https://oovc.vercel.app/api/geo.php?id=${element}`, async function(geo) {
                     setMapJson(geo.features, id, datas[1], datas[0]); 
                 });     
             });
